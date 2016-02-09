@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'bit' do
   pod 'Alamofire', '~> 3.0'
+  pod 'ReachabilitySwift', :git => 'https://github.com/ashleymills/Reachability.swift'
 end
 
