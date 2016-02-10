@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,22 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4K-hp-Hwz">
-                                <rect key="frame" x="225" y="264" width="151" height="71"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="151" id="gfS-Mh-VNM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4K-hp-Hwz">
+                                <rect key="frame" x="20" y="264" width="560" height="71"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" red="0.96862745098039216" green="0.792156862745098" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr8-fG-cH4">
-                                <rect key="frame" x="276" y="244" width="48" height="21"/>
+                                <rect key="frame" x="276" y="235" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OM-qU-0zv">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OM-qU-0zv">
                                 <rect key="frame" x="259" y="562" width="83" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Edit Amount">
@@ -42,8 +40,8 @@
                                     <action selector="getBitCoinAmount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBT-g3-sdc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1 ≈ N/A BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWc-qZ-acA">
-                                <rect key="frame" x="265" y="329" width="71" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$1 ≈ N/A BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWc-qZ-acA">
+                                <rect key="frame" x="265" y="343" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -51,18 +49,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="l4K-hp-Hwz" firstAttribute="centerX" secondItem="Vr8-fG-cH4" secondAttribute="centerX" id="3Hc-YP-Cd9"/>
-                            <constraint firstItem="sWc-qZ-acA" firstAttribute="leading" secondItem="Vr8-fG-cH4" secondAttribute="leading" id="AyW-xR-83k"/>
-                            <constraint firstItem="l4K-hp-Hwz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="244" id="BjR-6C-7tG"/>
-                            <constraint firstItem="l4K-hp-Hwz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E0S-7O-wkE"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sWc-qZ-acA" secondAttribute="bottom" constant="250" id="RoR-Vd-l2i"/>
-                            <constraint firstItem="Vr8-fG-cH4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="224" id="YOW-Bi-p09"/>
-                            <constraint firstItem="sWc-qZ-acA" firstAttribute="top" secondItem="Vr8-fG-cH4" secondAttribute="bottom" constant="64" id="b3I-2K-gau"/>
-                            <constraint firstItem="sWc-qZ-acA" firstAttribute="top" secondItem="l4K-hp-Hwz" secondAttribute="bottom" constant="-6" id="dl7-J7-J4H"/>
-                            <constraint firstItem="sWc-qZ-acA" firstAttribute="trailing" secondItem="Vr8-fG-cH4" secondAttribute="trailing" id="gQA-qX-lEL"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7OM-qU-0zv" secondAttribute="bottom" constant="8" id="iGq-oY-MIX"/>
-                            <constraint firstItem="7OM-qU-0zv" firstAttribute="centerX" secondItem="Vr8-fG-cH4" secondAttribute="centerX" id="jMr-On-I7l"/>
-                            <constraint firstItem="l4K-hp-Hwz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ugU-OI-jMW"/>
+                            <constraint firstItem="sWc-qZ-acA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="82Z-Je-WfN"/>
+                            <constraint firstItem="l4K-hp-Hwz" firstAttribute="top" secondItem="Vr8-fG-cH4" secondAttribute="bottom" constant="8" id="Er4-pV-ja0"/>
+                            <constraint firstItem="l4K-hp-Hwz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="J3t-6X-IXQ"/>
+                            <constraint firstItem="l4K-hp-Hwz" firstAttribute="top" secondItem="Vr8-fG-cH4" secondAttribute="bottom" constant="8" id="NDC-Bo-dfD"/>
+                            <constraint firstItem="l4K-hp-Hwz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ngx-6A-A32"/>
+                            <constraint firstItem="Vr8-fG-cH4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XjV-Cc-oiR"/>
+                            <constraint firstItem="l4K-hp-Hwz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ytf-vY-YQ0"/>
+                            <constraint firstItem="sWc-qZ-acA" firstAttribute="top" secondItem="l4K-hp-Hwz" secondAttribute="bottom" constant="8" id="bwJ-mw-gsP"/>
+                            <constraint firstItem="sWc-qZ-acA" firstAttribute="top" secondItem="l4K-hp-Hwz" secondAttribute="bottom" constant="8" id="yr0-1i-K5S"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

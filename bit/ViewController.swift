@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         let bits = validBitcoin(input)
         if (bits.isNormal) {
             currentBits = bits
-            lblCurrentBits.text = String(self.currentBits)
+            lblCurrentBits.text = String(self.currentBits) + " BTC"
             updateConvertedAmount()
         }
     }
