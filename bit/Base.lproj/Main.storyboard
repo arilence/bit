@@ -30,7 +30,13 @@
                                 <color key="textColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OM-qU-0zv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$1 ≈ N/A BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWc-qZ-acA">
+                                <rect key="frame" x="265" y="343" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OM-qU-0zv">
                                 <rect key="frame" x="259" y="562" width="83" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Edit Amount">
@@ -40,23 +46,19 @@
                                     <action selector="getBitCoinAmount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBT-g3-sdc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$1 ≈ N/A BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWc-qZ-acA">
-                                <rect key="frame" x="265" y="343" width="71" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="sWc-qZ-acA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="82Z-Je-WfN"/>
                             <constraint firstItem="l4K-hp-Hwz" firstAttribute="top" secondItem="Vr8-fG-cH4" secondAttribute="bottom" constant="8" id="Er4-pV-ja0"/>
+                            <constraint firstItem="7OM-qU-0zv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HjA-P5-42w"/>
                             <constraint firstItem="l4K-hp-Hwz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="J3t-6X-IXQ"/>
                             <constraint firstItem="l4K-hp-Hwz" firstAttribute="top" secondItem="Vr8-fG-cH4" secondAttribute="bottom" constant="8" id="NDC-Bo-dfD"/>
                             <constraint firstItem="l4K-hp-Hwz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ngx-6A-A32"/>
                             <constraint firstItem="Vr8-fG-cH4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XjV-Cc-oiR"/>
                             <constraint firstItem="l4K-hp-Hwz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ytf-vY-YQ0"/>
                             <constraint firstItem="sWc-qZ-acA" firstAttribute="top" secondItem="l4K-hp-Hwz" secondAttribute="bottom" constant="8" id="bwJ-mw-gsP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7OM-qU-0zv" secondAttribute="bottom" constant="8" id="hYJ-hS-c4v"/>
                             <constraint firstItem="sWc-qZ-acA" firstAttribute="top" secondItem="l4K-hp-Hwz" secondAttribute="bottom" constant="8" id="yr0-1i-K5S"/>
                         </constraints>
                     </view>
