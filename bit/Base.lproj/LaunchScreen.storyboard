@@ -19,9 +19,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BitcoinLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9hk-Vy-Gir">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="130" y="230" width="140" height="140"/>
-                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.26666666666666666" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>

@@ -20,9 +20,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BitcoinLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VNR-iA-Jm8">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="130" y="110" width="140" height="140"/>
-                                </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihy-s7-Cs1">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -32,9 +29,6 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="85"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="32.5" y="22" width="326" height="105"/>
-                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 BTC ➔ USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sr1-uL-SIg">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -47,9 +41,6 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="125" y="122" width="150" height="14.5"/>
-                                        </variation>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -100,7 +91,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="288" width="400" height="136.5"/>
+                                    <rect key="frame" x="0.0" y="276" width="400" height="141.5"/>
                                     <mask key="subviews">
                                         <include reference="rD4-2F-ym1"/>
                                         <include reference="Sr1-uL-SIg"/>
@@ -123,9 +114,6 @@
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ4-mS-OLD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="Icon-Settings"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="360" y="30" width="20" height="20"/>
-                                </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVq-V7-lvR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -134,9 +122,6 @@
                                 <state key="normal" title="CONVERT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="123" y="432" width="154" height="48"/>
-                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.26666666666666666" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
