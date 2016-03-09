@@ -80,12 +80,12 @@
 		9263C88A1C62FCF10090B118 /* bit */ = {
 			isa = PBXGroup;
 			children = (
+				9263C8921C62FCF10090B118 /* Assets.xcassets */,
+				9263C8971C62FCF10090B118 /* Info.plist */,
 				9263C88B1C62FCF10090B118 /* AppDelegate.swift */,
 				9263C88D1C62FCF10090B118 /* ViewController.swift */,
 				9263C88F1C62FCF10090B118 /* Main.storyboard */,
-				9263C8921C62FCF10090B118 /* Assets.xcassets */,
 				9263C8941C62FCF10090B118 /* LaunchScreen.storyboard */,
-				9263C8971C62FCF10090B118 /* Info.plist */,
 				9276139C1C884038002BA470 /* OfflineData.swift */,
 			);
 			path = bit;
