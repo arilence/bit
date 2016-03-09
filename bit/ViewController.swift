@@ -9,24 +9,23 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
 class ViewController: UIViewController {
     
-    private let htmlUrl:String = "https://api.bitcoinaverage.com/exchanges/CAD"
+    let gradientLayer = CAGradientLayer()
     
-    @IBOutlet weak var lblCurrentBits: UILabel!
-    @IBOutlet weak var lblConvertedAmount: UILabel!
-    @IBOutlet weak var lblConversionRate: UILabel!
-    
-    private var currentBits:Float = 0
-    private var convertedAmount:Float = 0
-    private var conversionRate:Float = 0
+    @IBOutlet weak var convertButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        loadConversionRate()
+        self.setGradientBackground()
+        
+        convertButton.backgroundColor = UIColor.clearColor()
+        convertButton.layer.cornerRadius = 5
+        convertButton.layer.borderWidth = 1
+        convertButton.layer.borderColor = UIColor.whiteColor().CGColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,53 +33,24 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /**
-     * Show a popup for the user to enter their bitcoin amount
-     */
-    @IBAction func getBitCoinAmount(sender: AnyObject) {
-        let _ = PopupTextField().showTextField(self, completion: {
-            (result: String) in
-            self.updateCurrentBits(result)
-        })
-    }
-    
-    func loadConversionRate() {
-        Alamofire.request(.GET, self.htmlUrl)
-            .responseJSON { response in
-                let jsonResponse = response.result.value!
-                let jsonOBJ = JSON(jsonResponse)
-                
-                let rate = jsonOBJ["coinbase"]["rates"]["bid"].float!
-                self.updateConversionRate(rate)
-        }
-    }
-    
-    func updateCurrentBits(input:String) {
-        let bits = validBitcoin(input)
-        if (bits.isNormal) {
-            currentBits = bits
-            lblCurrentBits.text = String(self.currentBits) + " BTC"
-            updateConvertedAmount()
-        }
-    }
-    
-    func updateConvertedAmount() {
-        convertedAmount = currentBits * conversionRate
-        lblConvertedAmount.text = "$" + String(convertedAmount)
-    }
-    
-    func updateConversionRate(input:Float) {
-        conversionRate = input
-        lblConversionRate.text = "$1 ≈ " + String(conversionRate) + " BTC"
-    }
-    
-    func validBitcoin(input:String) -> Float {
-        let output = Float(input)
-        if (output != nil) {
-            return output!
-        } else {
-            return 0
-        }
+    // Adds a gradient layer ontop of the background view
+    private func setGradientBackground() {
+        // 1
+        self.view.backgroundColor = UIColor.greenColor()
+        
+        // 2
+        gradientLayer.frame = self.view.bounds
+        
+        // 3
+        let color1 = UIColor(red: 0.922, green: 0.353, blue: 0.227, alpha: 1.0).CGColor as CGColorRef
+        let color2 = UIColor(red: 0.922, green: 0.169, blue: 0.388, alpha: 1.0).CGColor as CGColorRef
+        gradientLayer.colors = [color1, color2]
+        
+        // 4
+        gradientLayer.locations = [0.0, 1.0]
+        
+        // 5
+        self.view.layer.addSublayer(gradientLayer)
     }
     
     // Changes the status bar text colour to white.
