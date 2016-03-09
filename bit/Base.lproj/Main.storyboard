@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeController" customModule="bit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -91,7 +91,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="276" width="400" height="141.5"/>
+                                    <rect key="frame" x="0.0" y="276" width="400" height="142"/>
                                     <mask key="subviews">
                                         <include reference="rD4-2F-ym1"/>
                                         <include reference="Sr1-uL-SIg"/>
@@ -114,6 +114,9 @@
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ4-mS-OLD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="Icon-Settings"/>
+                                <connections>
+                                    <segue destination="aWf-ZH-5gr" kind="show" id="Svp-FN-VYp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVq-V7-lvR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -213,9 +216,80 @@
             </objects>
             <point key="canvasLocation" x="375" y="337"/>
         </scene>
+        <!--Currency Controller-->
+        <scene sceneID="KF5-vc-8EP">
+            <objects>
+                <viewController id="aWf-ZH-5gr" customClass="CurrencyController" customModule="bit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EJI-Z2-X63"/>
+                        <viewControllerLayoutGuide type="bottom" id="TlQ-d3-7YA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F3Q-Zg-W8l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gf6-Ms-0eu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="Icon-Close"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="358" y="30" width="22" height="22"/>
+                                </variation>
+                                <connections>
+                                    <action selector="closeButton:" destination="aWf-ZH-5gr" eventType="touchUpInside" id="18R-a7-M5b"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HEh-z5-anl">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="192" width="400" height="216"/>
+                                </variation>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.2666666667" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HEh-z5-anl" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="2Is-sD-zco"/>
+                            <constraint firstItem="Gf6-Ms-0eu" firstAttribute="trailing" secondItem="F3Q-Zg-W8l" secondAttribute="trailingMargin" id="cAe-ek-iBu"/>
+                            <constraint firstItem="Gf6-Ms-0eu" firstAttribute="top" secondItem="EJI-Z2-X63" secondAttribute="bottom" constant="10" id="fdl-g6-Bf5"/>
+                            <constraint firstItem="HEh-z5-anl" firstAttribute="centerY" secondItem="F3Q-Zg-W8l" secondAttribute="centerY" id="i5b-rE-AA1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Gf6-Ms-0eu"/>
+                                <exclude reference="HEh-z5-anl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2Is-sD-zco"/>
+                                <exclude reference="i5b-rE-AA1"/>
+                                <exclude reference="cAe-ek-iBu"/>
+                                <exclude reference="fdl-g6-Bf5"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Gf6-Ms-0eu"/>
+                                <include reference="HEh-z5-anl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2Is-sD-zco"/>
+                                <include reference="i5b-rE-AA1"/>
+                                <include reference="cAe-ek-iBu"/>
+                                <include reference="fdl-g6-Bf5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="currencyPicker" destination="HEh-z5-anl" id="gza-UI-uqf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ekc-hw-Z6s" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1182" y="337"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BitcoinLogo" width="128" height="128"/>
+        <image name="Icon-Close" width="25" height="25"/>
         <image name="Icon-Settings" width="22" height="22"/>
     </resources>
 </document>

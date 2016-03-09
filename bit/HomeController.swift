@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import RealmSwift
 
-class ViewController: UIViewController {
+class HomeController: UIViewController {
     
     @IBOutlet weak var convertButton: UIButton!
     

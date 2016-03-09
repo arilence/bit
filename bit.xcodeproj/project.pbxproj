@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9263C88C1C62FCF10090B118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9263C88B1C62FCF10090B118 /* AppDelegate.swift */; };
-		9263C88E1C62FCF10090B118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9263C88D1C62FCF10090B118 /* ViewController.swift */; };
+		9263C88E1C62FCF10090B118 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9263C88D1C62FCF10090B118 /* HomeController.swift */; };
 		9263C8911C62FCF10090B118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9263C88F1C62FCF10090B118 /* Main.storyboard */; };
 		9263C8931C62FCF10090B118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9263C8921C62FCF10090B118 /* Assets.xcassets */; };
 		9263C8961C62FCF10090B118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9263C8941C62FCF10090B118 /* LaunchScreen.storyboard */; };
 		92836B241C8FE97300EF32B3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92836B231C8FE97300EF32B3 /* Helpers.swift */; };
+		92836B261C8FF1AE00EF32B3 /* CurrencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92836B251C8FF1AE00EF32B3 /* CurrencyController.swift */; };
 		BD8F1E24F2B55DF7F36E8FC9 /* Pods_bit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883FB4A747B26B1205F6F04C /* Pods_bit.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +23,13 @@
 		883FB4A747B26B1205F6F04C /* Pods_bit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9263C8881C62FCF10090B118 /* bit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9263C88B1C62FCF10090B118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9263C88D1C62FCF10090B118 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9263C88D1C62FCF10090B118 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		9263C8901C62FCF10090B118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9263C8921C62FCF10090B118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9263C8951C62FCF10090B118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9263C8971C62FCF10090B118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92836B231C8FE97300EF32B3 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		92836B251C8FF1AE00EF32B3 /* CurrencyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,8 @@
 				9263C8971C62FCF10090B118 /* Info.plist */,
 				92836B231C8FE97300EF32B3 /* Helpers.swift */,
 				9263C88B1C62FCF10090B118 /* AppDelegate.swift */,
-				9263C88D1C62FCF10090B118 /* ViewController.swift */,
+				9263C88D1C62FCF10090B118 /* HomeController.swift */,
+				92836B251C8FF1AE00EF32B3 /* CurrencyController.swift */,
 				9263C88F1C62FCF10090B118 /* Main.storyboard */,
 				9263C8941C62FCF10090B118 /* LaunchScreen.storyboard */,
 			);
@@ -214,8 +217,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9263C88E1C62FCF10090B118 /* ViewController.swift in Sources */,
+				9263C88E1C62FCF10090B118 /* HomeController.swift in Sources */,
 				92836B241C8FE97300EF32B3 /* Helpers.swift in Sources */,
+				92836B261C8FF1AE00EF32B3 /* CurrencyController.swift in Sources */,
 				9263C88C1C62FCF10090B118 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
