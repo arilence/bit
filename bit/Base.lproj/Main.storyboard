@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BitcoinLogo" translatesAutoresizingMaskIntoConstraints="NO" id="VNR-iA-Jm8">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="130" y="90" width="140" height="140"/>
+                                    <rect key="frame" x="130" y="110" width="140" height="140"/>
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihy-s7-Cs1">
@@ -100,7 +100,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="268" width="400" height="136.5"/>
+                                    <rect key="frame" x="0.0" y="288" width="400" height="136.5"/>
                                     <mask key="subviews">
                                         <include reference="rD4-2F-ym1"/>
                                         <include reference="Sr1-uL-SIg"/>
@@ -135,7 +135,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="123" y="472" width="154" height="48"/>
+                                    <rect key="frame" x="123" y="432" width="154" height="48"/>
                                 </variation>
                             </button>
                         </subviews>
@@ -151,23 +151,21 @@
                                 <variation key="widthClass=compact" constant="-20"/>
                             </constraint>
                             <constraint firstItem="VNR-iA-Jm8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="bTc-3z-inm">
-                                <variation key="widthClass=compact" constant="70"/>
+                                <variation key="widthClass=compact" constant="90"/>
                             </constraint>
                             <constraint firstItem="Ihy-s7-Cs1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="cYz-SQ-PaK">
                                 <variation key="widthClass=compact" constant="-20"/>
                             </constraint>
                             <constraint firstItem="aZ4-mS-OLD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dId-kZ-qSK"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BVq-V7-lvR" secondAttribute="bottom" constant="78" id="oXZ-an-tQM">
-                                <variation key="widthClass=compact" constant="80"/>
-                            </constraint>
                             <constraint firstItem="Ihy-s7-Cs1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qZM-pX-OLz"/>
                             <constraint firstItem="VNR-iA-Jm8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="tx5-g3-sAK">
-                                <variation key="widthClass=compact" constant="70"/>
+                                <variation key="widthClass=compact" constant="90"/>
                             </constraint>
                             <constraint firstItem="aZ4-mS-OLD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="vzD-0h-u29">
                                 <variation key="widthClass=compact" constant="10"/>
                             </constraint>
                             <constraint firstItem="Ihy-s7-Cs1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yVG-Pm-677"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BVq-V7-lvR" secondAttribute="bottom" constant="120" id="ysQ-eK-UDm"/>
                             <constraint firstItem="Ihy-s7-Cs1" firstAttribute="top" secondItem="VNR-iA-Jm8" secondAttribute="bottom" constant="50" id="zzd-0s-GDW">
                                 <variation key="widthClass=compact" constant="38"/>
                             </constraint>
@@ -193,7 +191,7 @@
                                 <exclude reference="dId-kZ-qSK"/>
                                 <exclude reference="vzD-0h-u29"/>
                                 <exclude reference="EeV-ll-VYd"/>
-                                <exclude reference="oXZ-an-tQM"/>
+                                <exclude reference="ysQ-eK-UDm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -217,7 +215,7 @@
                                 <include reference="dId-kZ-qSK"/>
                                 <include reference="vzD-0h-u29"/>
                                 <include reference="EeV-ll-VYd"/>
-                                <include reference="oXZ-an-tQM"/>
+                                <include reference="ysQ-eK-UDm"/>
                             </mask>
                         </variation>
                     </view>
