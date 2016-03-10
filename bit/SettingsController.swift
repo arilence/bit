@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrencyController: UIViewController {
+class SettingsController: UIViewController {
     
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var currencyPicker: UIPickerView!

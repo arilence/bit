@@ -217,10 +217,10 @@
             </objects>
             <point key="canvasLocation" x="375" y="337"/>
         </scene>
-        <!--Currency Controller-->
+        <!--Settings Controller-->
         <scene sceneID="KF5-vc-8EP">
             <objects>
-                <viewController id="aWf-ZH-5gr" customClass="CurrencyController" customModule="bit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aWf-ZH-5gr" customClass="SettingsController" customModule="bit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EJI-Z2-X63"/>
                         <viewControllerLayoutGuide type="bottom" id="TlQ-d3-7YA"/>
