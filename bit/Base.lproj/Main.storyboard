@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -78,16 +79,16 @@
                                         <exclude reference="9bp-yG-Brq"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="eCv-xI-Svn"/>
+                                        <exclude reference="fzT-0m-45Q"/>
+                                        <exclude reference="xbp-3R-F0Z"/>
+                                        <exclude reference="RH9-Vd-d4O"/>
                                         <exclude reference="7ak-B5-6Ag"/>
                                         <exclude reference="GcT-QF-CGG"/>
                                         <exclude reference="Rgd-OK-jiG"/>
                                         <exclude reference="bep-aa-4OF"/>
                                         <exclude reference="dlT-5T-unl"/>
                                         <exclude reference="phv-Gs-6O6"/>
-                                        <exclude reference="eCv-xI-Svn"/>
-                                        <exclude reference="fzT-0m-45Q"/>
-                                        <exclude reference="xbp-3R-F0Z"/>
-                                        <exclude reference="RH9-Vd-d4O"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -98,16 +99,16 @@
                                         <include reference="9bp-yG-Brq"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="eCv-xI-Svn"/>
+                                        <include reference="fzT-0m-45Q"/>
+                                        <include reference="xbp-3R-F0Z"/>
+                                        <include reference="RH9-Vd-d4O"/>
                                         <include reference="7ak-B5-6Ag"/>
                                         <include reference="GcT-QF-CGG"/>
                                         <include reference="Rgd-OK-jiG"/>
                                         <include reference="bep-aa-4OF"/>
                                         <include reference="dlT-5T-unl"/>
                                         <include reference="phv-Gs-6O6"/>
-                                        <include reference="eCv-xI-Svn"/>
-                                        <include reference="fzT-0m-45Q"/>
-                                        <include reference="xbp-3R-F0Z"/>
-                                        <include reference="RH9-Vd-d4O"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -166,9 +167,10 @@
                                 <exclude reference="BVq-V7-lvR"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="07P-Vz-Cf0"/>
-                                <exclude reference="bTc-3z-inm"/>
-                                <exclude reference="tx5-g3-sAK"/>
+                                <exclude reference="ysQ-eK-UDm"/>
+                                <exclude reference="EeV-ll-VYd"/>
+                                <exclude reference="dId-kZ-qSK"/>
+                                <exclude reference="vzD-0h-u29"/>
                                 <exclude reference="0zo-gg-BIy"/>
                                 <exclude reference="FNz-OV-J3o"/>
                                 <exclude reference="Ffl-xp-duc"/>
@@ -176,10 +178,9 @@
                                 <exclude reference="qZM-pX-OLz"/>
                                 <exclude reference="yVG-Pm-677"/>
                                 <exclude reference="zzd-0s-GDW"/>
-                                <exclude reference="dId-kZ-qSK"/>
-                                <exclude reference="vzD-0h-u29"/>
-                                <exclude reference="EeV-ll-VYd"/>
-                                <exclude reference="ysQ-eK-UDm"/>
+                                <exclude reference="07P-Vz-Cf0"/>
+                                <exclude reference="bTc-3z-inm"/>
+                                <exclude reference="tx5-g3-sAK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -190,9 +191,10 @@
                                 <include reference="BVq-V7-lvR"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="07P-Vz-Cf0"/>
-                                <include reference="bTc-3z-inm"/>
-                                <include reference="tx5-g3-sAK"/>
+                                <include reference="ysQ-eK-UDm"/>
+                                <include reference="EeV-ll-VYd"/>
+                                <include reference="dId-kZ-qSK"/>
+                                <include reference="vzD-0h-u29"/>
                                 <include reference="0zo-gg-BIy"/>
                                 <include reference="FNz-OV-J3o"/>
                                 <include reference="Ffl-xp-duc"/>
@@ -200,10 +202,9 @@
                                 <include reference="qZM-pX-OLz"/>
                                 <include reference="yVG-Pm-677"/>
                                 <include reference="zzd-0s-GDW"/>
-                                <include reference="dId-kZ-qSK"/>
-                                <include reference="vzD-0h-u29"/>
-                                <include reference="EeV-ll-VYd"/>
-                                <include reference="ysQ-eK-UDm"/>
+                                <include reference="07P-Vz-Cf0"/>
+                                <include reference="bTc-3z-inm"/>
+                                <include reference="tx5-g3-sAK"/>
                             </mask>
                         </variation>
                     </view>
@@ -231,23 +232,30 @@
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gf6-Ms-0eu">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="Icon-Close"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="358" y="30" width="22" height="22"/>
-                                </variation>
                                 <connections>
                                     <action selector="closeButton:" destination="aWf-ZH-5gr" eventType="touchUpInside" id="18R-a7-M5b"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HEh-z5-anl">
                                 <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="192" width="400" height="216"/>
-                                </variation>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5V-kb-Xzd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="15" maxX="30" maxY="15"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="128" y="416" width="145" height="51"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.2666666667" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HEh-z5-anl" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="2Is-sD-zco"/>
+                            <constraint firstItem="B5V-kb-Xzd" firstAttribute="top" secondItem="HEh-z5-anl" secondAttribute="bottom" constant="8" id="QwX-q8-GlP"/>
+                            <constraint firstItem="B5V-kb-Xzd" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="Ymk-Cr-gYt"/>
                             <constraint firstItem="Gf6-Ms-0eu" firstAttribute="trailing" secondItem="F3Q-Zg-W8l" secondAttribute="trailingMargin" id="cAe-ek-iBu"/>
                             <constraint firstItem="Gf6-Ms-0eu" firstAttribute="top" secondItem="EJI-Z2-X63" secondAttribute="bottom" constant="10" id="fdl-g6-Bf5"/>
                             <constraint firstItem="HEh-z5-anl" firstAttribute="centerY" secondItem="F3Q-Zg-W8l" secondAttribute="centerY" id="i5b-rE-AA1"/>
@@ -256,30 +264,37 @@
                             <mask key="subviews">
                                 <exclude reference="Gf6-Ms-0eu"/>
                                 <exclude reference="HEh-z5-anl"/>
+                                <exclude reference="B5V-kb-Xzd"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2Is-sD-zco"/>
                                 <exclude reference="i5b-rE-AA1"/>
                                 <exclude reference="cAe-ek-iBu"/>
                                 <exclude reference="fdl-g6-Bf5"/>
+                                <exclude reference="QwX-q8-GlP"/>
+                                <exclude reference="Ymk-Cr-gYt"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Gf6-Ms-0eu"/>
                                 <include reference="HEh-z5-anl"/>
+                                <include reference="B5V-kb-Xzd"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="2Is-sD-zco"/>
                                 <include reference="i5b-rE-AA1"/>
                                 <include reference="cAe-ek-iBu"/>
                                 <include reference="fdl-g6-Bf5"/>
+                                <include reference="QwX-q8-GlP"/>
+                                <include reference="Ymk-Cr-gYt"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="currencyPicker" destination="HEh-z5-anl" id="gza-UI-uqf"/>
+                        <outlet property="saveButton" destination="B5V-kb-Xzd" id="qLg-qA-76J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ekc-hw-Z6s" sceneMemberID="firstResponder"/>
@@ -289,7 +304,7 @@
     </scenes>
     <resources>
         <image name="BitcoinLogo" width="128" height="128"/>
-        <image name="Icon-Close" width="25" height="25"/>
+        <image name="Icon-Close" width="22" height="22"/>
         <image name="Icon-Settings" width="22" height="22"/>
     </resources>
 </document>

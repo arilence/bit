@@ -19,11 +19,7 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         
         Helpers.setGradientBackground(self)
-        
-        convertButton.backgroundColor = UIColor.clearColor()
-        convertButton.layer.cornerRadius = 5
-        convertButton.layer.borderWidth = 1
-        convertButton.layer.borderColor = UIColor.whiteColor().CGColor
+        Helpers.addBorderToButton(convertButton)
     }
 
     override func didReceiveMemoryWarning() {

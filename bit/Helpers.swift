@@ -23,4 +23,12 @@ public class Helpers {
         targetView.view.layer.addSublayer(gradientLayer)
     }
     
+    // Takes a button and makes it beautiful again :P
+    public static func addBorderToButton(button:UIButton) {
+        button.backgroundColor = UIColor.clearColor()
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.whiteColor().CGColor
+    }
+    
 }

@@ -10,11 +10,14 @@ import UIKit
 
 class CurrencyController: UIViewController {
     
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var currencyPicker: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Helpers.setGradientBackground(self)
+        Helpers.addBorderToButton(saveButton)
     }
     
     override func didReceiveMemoryWarning() {
