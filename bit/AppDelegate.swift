@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     static func setDefaultTheme() {
-        UIView.appearance().tintColor = UIColor.whiteColor()
+        UIView.appearance().tintColor = UIColor.blackColor()
         UINavigationBar.appearance().translucent = true
         UIApplication.sharedApplication().statusBarStyle = .LightContent
     }
