@@ -22,10 +22,12 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate {
         super.viewDidLoad()
         
         Helpers.addBorderToButton(saveButton, color: UIColor.blackColor())
-        
-        // Set picker equal to the users saved settings
+
+        // Initialize Currency Picker and set it to the users preference setting
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let choice = userDefaults.integerForKey(AppDelegate.settingsKeys.KEY_CURRENCY)
+        
+        currencyPicker.delegate = self
         currencyPicker.selectRow(Int(choice), inComponent: 0, animated: false)
     }
     
@@ -56,7 +58,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate {
     // Set the font colour of the elements in the pickerView to white
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = Exchange.CurrencyTypes[row]
-        let myTitle = NSAttributedString(string: titleData[0], attributes: [NSFontAttributeName:UIFont(name: "Helvetica", size: 15.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
+        let myTitle = NSAttributedString(string: titleData[0], attributes: [NSFontAttributeName:UIFont(name: "Helvetica", size: 15.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
         return myTitle
     }
     
