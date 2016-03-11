@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import RealmSwift
 
 internal final class HomeViewController: UIViewController {
     

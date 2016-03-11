@@ -47,7 +47,9 @@
             </subviews>
             <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="lvH-Tb-7aS" firstAttribute="top" secondItem="65s-Y3-E9w" secondAttribute="bottom" constant="27" id="H3K-OQ-Tqz"/>
+                <constraint firstItem="lvH-Tb-7aS" firstAttribute="top" secondItem="65s-Y3-E9w" secondAttribute="bottom" constant="27" id="H3K-OQ-Tqz">
+                    <variation key="widthClass=compact" constant="37"/>
+                </constraint>
                 <constraint firstItem="65s-Y3-E9w" firstAttribute="top" secondItem="dHD-63-I2l" secondAttribute="top" constant="120" id="eEl-0r-a4H"/>
                 <constraint firstAttribute="trailing" secondItem="g41-0W-EA3" secondAttribute="trailing" constant="20" id="l6V-lY-5g6"/>
                 <constraint firstItem="CCk-MT-HnC" firstAttribute="centerX" secondItem="dHD-63-I2l" secondAttribute="centerX" id="pdd-md-PE6"/>
