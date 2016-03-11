@@ -14,6 +14,13 @@ public class Settings {
         static let KEY_EXCHANGE_RATE = "exchange_rate_key"
     }
 
-    public static let settingsCurrency = ["CAD", "USD", "JPY", "GBP", "EUR", "AUD"]
+    public static let settingsCurrency = [
+        "CAD",
+        "USD",
+        "JPY",
+        "GBP",
+        "EUR",
+        "AUD"
+    ]
     
 }

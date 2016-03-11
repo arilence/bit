@@ -18,21 +18,30 @@ class SettingsController: UIViewController {
         
         Helpers.setGradientBackground(self)
         Helpers.addBorderToButton(saveButton)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let stringOne = defaults.integerForKey(Settings.settingsKeys.KEY_CURRENCY)
+        
+        print(stringOne)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     @IBAction func saveButton(sender: AnyObject) {
-        // TODO: Save curreny preference
+        let choice = currencyPicker.selectedRowInComponent(0)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        // Save the value into local storage
+        defaults.setValue(choice, forKey: Settings.settingsKeys.KEY_CURRENCY)
+        print(Settings.settingsCurrency[choice])
+        defaults.synchronize()
+
         closeView()
     }
     
     @IBAction func closeButton(sender: AnyObject) {
         closeView()
     }
+    
+    // MARK: Pickerview
     
     // Set the font colour of the elements in the pickerView to white
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
@@ -54,6 +63,8 @@ class SettingsController: UIViewController {
         return Settings.settingsCurrency.count
     }
     
+    // MARK: Miscellaneous Extras
+    
     // Returns the user back to the home page
     func closeView() {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -63,6 +74,11 @@ class SettingsController: UIViewController {
     // For some reason changing it in the storyboard doesn't work.
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
 }
