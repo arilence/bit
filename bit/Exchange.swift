@@ -16,7 +16,9 @@ public class Exchange {
         ["USD", "$"],
         ["JPY", "¥"],
         ["GBP", "£"],
-        ["EUR", "€"]
+        ["EUR", "€"],
+        ["PKR", "₹"],
+        ["PHP", "₱"]
     ]
     
     private let baseURL = "https://api.bitcoinaverage.com/ticker/global/"

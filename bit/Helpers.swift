@@ -37,12 +37,12 @@ public class Helpers {
         var output:String = ""
         var ending:String = ""
         
-        if (value > 1000) {
-            ending += "K"
-            newValue = value / 1000
-        } else if (value > 1000000) {
+        if (value > 1000000) {
             ending += "M"
             newValue = value / 1000000
+        } else if (value > 1000) {
+            ending += "K"
+            newValue = value / 1000
         }
         
         output = String(format: "%.2f", newValue)
