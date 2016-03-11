@@ -20,10 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        
         window = UIWindow()
         window!.makeKeyAndVisible()
         AppDelegate.setDefaultTheme()
@@ -34,12 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     static func setDefaultTheme() {
         UIView.appearance().tintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
         UINavigationBar.appearance().translucent = true
-        UINavigationBar.appearance().barStyle = .Black
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarPosition: .Any, barMetrics: .Default)
-        UINavigationBar.appearance().shadowImage = UIImage()
         UIApplication.sharedApplication().statusBarStyle = .LightContent
     }
 
