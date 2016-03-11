@@ -19,10 +19,10 @@ class SettingsController: UIViewController {
         Helpers.setGradientBackground(self)
         Helpers.addBorderToButton(saveButton)
         
+        // Set picker equal to the users saved settings
         let defaults = NSUserDefaults.standardUserDefaults()
-        let stringOne = defaults.integerForKey(Settings.settingsKeys.KEY_CURRENCY)
-        
-        print(stringOne)
+        let currencyChoice = defaults.integerForKey(Settings.settingsKeys.KEY_CURRENCY)
+        currencyPicker.selectRow(currencyChoice, inComponent: 0, animated: false)
     }
 
     @IBAction func saveButton(sender: AnyObject) {
@@ -31,7 +31,6 @@ class SettingsController: UIViewController {
         
         // Save the value into local storage
         defaults.setValue(choice, forKey: Settings.settingsKeys.KEY_CURRENCY)
-        print(Settings.settingsCurrency[choice])
         defaults.synchronize()
 
         closeView()

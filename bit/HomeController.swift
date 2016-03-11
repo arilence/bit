@@ -20,6 +20,18 @@ class HomeController: UIViewController {
         
         Helpers.setGradientBackground(self)
         Helpers.addBorderToButton(convertButton)
+        
+        setDefaultsIfNone()
+    }
+    
+    // Sets default settings values for first time users
+    func setDefaultsIfNone() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if defaults.objectForKey(Settings.settingsKeys.KEY_CURRENCY) == nil {
+            defaults.setValue(0, forKey: Settings.settingsKeys.KEY_CURRENCY)
+            defaults.synchronize()
+        }
     }
 
     override func didReceiveMemoryWarning() {
