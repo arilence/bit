@@ -100,11 +100,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVq-V7-lvR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="30" minY="15" maxX="30" maxY="15"/>
                                 <state key="normal" title="CONVERT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="127.5" y="429" width="145" height="51"/>
+                                </variation>
                                 <connections>
                                     <action selector="showInputDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAF-f2-M2H"/>
                                 </connections>
@@ -243,22 +246,36 @@
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5V-kb-Xzd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <inset key="contentEdgeInsets" minX="30" minY="15" maxX="30" maxY="15"/>
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="148" y="416" width="105" height="51"/>
+                                </variation>
                                 <connections>
                                     <action selector="saveButton:" destination="aWf-ZH-5gr" eventType="touchUpInside" id="Ntb-Pp-zUd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcy-tX-gOl">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="73" y="115" width="255" height="37"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.2666666667" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="B5V-kb-Xzd" firstAttribute="top" secondItem="HEh-z5-anl" secondAttribute="bottom" constant="8" id="1M0-Ie-rh2">
                                 <variation key="widthClass=compact" constant="21"/>
                             </constraint>
+                            <constraint firstItem="Jcy-tX-gOl" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="2Uq-fd-qyM"/>
                             <constraint firstItem="HEh-z5-anl" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="5xf-x4-mv3"/>
+                            <constraint firstItem="HEh-z5-anl" firstAttribute="top" secondItem="Jcy-tX-gOl" secondAttribute="bottom" constant="27" id="Nhg-9U-3Ym"/>
                             <constraint firstItem="Gf6-Ms-0eu" firstAttribute="trailing" secondItem="F3Q-Zg-W8l" secondAttribute="trailingMargin" id="cAe-ek-iBu"/>
                             <constraint firstItem="B5V-kb-Xzd" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="dz2-jP-jNF"/>
                             <constraint firstItem="Gf6-Ms-0eu" firstAttribute="top" secondItem="EJI-Z2-X63" secondAttribute="bottom" constant="10" id="fdl-g6-Bf5"/>
@@ -271,9 +288,12 @@
                                 <exclude reference="Gf6-Ms-0eu"/>
                                 <exclude reference="HEh-z5-anl"/>
                                 <exclude reference="B5V-kb-Xzd"/>
+                                <exclude reference="Jcy-tX-gOl"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="2Uq-fd-qyM"/>
                                 <exclude reference="5xf-x4-mv3"/>
+                                <exclude reference="Nhg-9U-3Ym"/>
                                 <exclude reference="zJ1-zv-HQY"/>
                                 <exclude reference="cAe-ek-iBu"/>
                                 <exclude reference="fdl-g6-Bf5"/>
@@ -286,9 +306,12 @@
                                 <include reference="Gf6-Ms-0eu"/>
                                 <include reference="HEh-z5-anl"/>
                                 <include reference="B5V-kb-Xzd"/>
+                                <include reference="Jcy-tX-gOl"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="2Uq-fd-qyM"/>
                                 <include reference="5xf-x4-mv3"/>
+                                <include reference="Nhg-9U-3Ym"/>
                                 <include reference="zJ1-zv-HQY"/>
                                 <include reference="cAe-ek-iBu"/>
                                 <include reference="fdl-g6-Bf5"/>
