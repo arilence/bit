@@ -68,6 +68,7 @@ internal final class HomeViewController: UIViewController {
         
         //2. Add the text field. You can configure it however you need.
         alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
+            textField.keyboardType = UIKeyboardType.DecimalPad
             textField.text = ""
         })
         
@@ -78,8 +79,12 @@ internal final class HomeViewController: UIViewController {
             let outputString = textField.text!
             let output = Float(outputString)
             if (output != nil) {
-                defaults.setValue(output, forKey: AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
-                self.getCurrentExchange()
+                if (output < 1000000) {
+                    defaults.setValue(output, forKey: AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
+                    self.getCurrentExchange()
+                } else {
+                    self.showErrorDialog("Too many bitcoins")
+                }
             } else if (outputString.characters.count > 0) {
                 self.showErrorDialog()
             }
@@ -89,8 +94,8 @@ internal final class HomeViewController: UIViewController {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func showErrorDialog() {
-        let alert = UIAlertController(title: "Whoops", message: "The value you entered is invalid", preferredStyle: UIAlertControllerStyle.Alert)
+    func showErrorDialog(text:String = "The value you entered is invalid") {
+        let alert = UIAlertController(title: "Whoops", message: text, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
