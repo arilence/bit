@@ -105,6 +105,9 @@
                                 <state key="normal" title="CONVERT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="showInputDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAF-f2-M2H"/>
+                                </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="xbq-iG-Ptx">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>

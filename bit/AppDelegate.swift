@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         static let KEY_CURRENCY = "currency_key"
         static let KEY_SAVED_CURRENCY = "saved_currency_key"
         static let KEY_SAVED_RATE = "saved_rate_key"
+        static let KEY_SAVED_BITCOIN = "saved_bitcoin"
     }
 
     var window: UIWindow?

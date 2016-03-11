@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeController.swift
 //  bit
 //
 //  Created by Anthony on 2016-02-03.
@@ -32,11 +32,19 @@ class HomeController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        getCurrentExchange()
+    }
+    
+    // Updates and loads the current conversion rate from the interwebz
+    func getCurrentExchange() {
         loadingIndicator.startAnimating()
         
         exchange.getCurrentExchange() {choice,rate in
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let bitNum = defaults.floatForKey(AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
+            
             self.loadingIndicator.stopAnimating()
-            self.updateCurrencyLabel(choice)
+            self.updateCurrencyLabel(bitNum, choice: choice)
             self.updateValueLabel(choice, rate: rate)
         }
     }
@@ -47,29 +55,63 @@ class HomeController: UIViewController {
         
         if defaults.objectForKey(AppDelegate.settingsKeys.KEY_CURRENCY) == nil {
             defaults.setValue(0, forKey: AppDelegate.settingsKeys.KEY_CURRENCY)
+            defaults.setValue(1, forKey: AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
             defaults.synchronize()
             
             // Display the defaults from previous interwebz load
-            updateCurrencyLabel(0)
+            updateCurrencyLabel(1, choice: 0)
             updateValueLabel(0, rate: 0)
         } else {
             let choice = defaults.integerForKey(AppDelegate.settingsKeys.KEY_SAVED_CURRENCY)
             let rate = defaults.doubleForKey(AppDelegate.settingsKeys.KEY_SAVED_RATE)
+            let bitCoin = defaults.floatForKey(AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
             // Display the defaults from previous interwebz load
-            updateCurrencyLabel(choice)
+            updateCurrencyLabel(bitCoin, choice: choice)
             updateValueLabel(choice, rate: rate)
         }
     }
     
-    func updateCurrencyLabel(choice:Int) {
+    func updateCurrencyLabel(bitNum:Float, choice:Int) {
         let value = Exchange.CurrencyTypes[choice][0]
-        currencyLabel.text = "1 BTC ➔ " + value
+        currencyLabel.text = String(bitNum) + " BTC ➔ " + value
     }
     
     func updateValueLabel(choice:Int, rate:Double) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let bitCoin = defaults.floatForKey(AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
         let symbol = Exchange.CurrencyTypes[choice][1]
-        let value = 1 * rate
+        let value = Double(bitCoin) * rate
         valueLabel.text = symbol + Helpers.formatMonetaryValue(value)
+    }
+    
+    // Show popup dialog for user to enter amount of bitcoins
+    @IBAction func showInputDialog(sender: AnyObject) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Bitcoin Conversion", message: "Enter an amount of bitcoins", preferredStyle: .Alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
+            textField.text = ""
+        })
+        
+        //3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            let textField = alert.textFields![0] as UITextField
+            let output = Float(textField.text!)
+            if (output != nil) {
+                print("SUCCESS")
+                defaults.setValue(output, forKey: AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
+                self.getCurrentExchange()
+            } else {
+                print("ERROR")
+                // TODO: Display error message
+            }
+        }))
+        
+        // 4. Present the alert.
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
