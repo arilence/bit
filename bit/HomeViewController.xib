@@ -25,7 +25,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$523.40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNg-Ej-9ZC">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="85"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" misplaced="YES">
@@ -106,7 +106,7 @@
                     </variation>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.92156862750000001" green="0.2666666667" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.93333333333333335" green="0.14901960784313725" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="5c0-1L-728" firstAttribute="top" secondItem="VJg-2o-tKy" secondAttribute="top" constant="110" id="1mC-qo-RIs">
                     <variation key="widthClass=compact" constant="116"/>
