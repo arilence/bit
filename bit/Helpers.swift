@@ -24,11 +24,11 @@ public class Helpers {
     }
     
     // Takes a button and makes it beautiful again :P
-    public static func addBorderToButton(button:UIButton) {
+    public static func addBorderToButton(button:UIButton, color:UIColor) {
         button.backgroundColor = UIColor.clearColor()
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.whiteColor().CGColor
+        button.layer.borderColor = color.CGColor
     }
     
     // Formats monetary values to hopefully fit the screen

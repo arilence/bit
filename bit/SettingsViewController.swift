@@ -8,23 +8,33 @@
 
 import UIKit
 
-class SettingsController: UIViewController {
+class SettingsViewController: UIViewController, UIPickerViewDelegate {
+    
+    // MARK: Variables
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var currencyPicker: UIPickerView!
     
+    // MARK: UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Helpers.setGradientBackground(self)
-        Helpers.addBorderToButton(saveButton)
+        Helpers.addBorderToButton(saveButton, color: UIColor.blackColor())
         
         // Set picker equal to the users saved settings
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let choice = userDefaults.integerForKey(AppDelegate.settingsKeys.KEY_CURRENCY)
         currencyPicker.selectRow(Int(choice), inComponent: 0, animated: false)
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    // MARK: UI Button Actions
 
     @IBAction func saveButton(sender: AnyObject) {
         // Get the users selection from the uiPicker
@@ -67,13 +77,13 @@ class SettingsController: UIViewController {
     
     // Returns the user back to the home page
     func closeView() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     // Changes the status bar text colour to white.
     // For some reason changing it in the storyboard doesn't work.
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+        return UIStatusBarStyle.Default
     }
     
     override func didReceiveMemoryWarning() {

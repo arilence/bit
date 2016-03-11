@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="bit" customModuleProvider="target">
+            <connections>
+                <outlet property="convertButton" destination="jLM-AL-5GS" id="R9P-t3-EZU"/>
+                <outlet property="currencyLabel" destination="055-KA-0S0" id="WaA-um-W1L"/>
+                <outlet property="loadingIndicator" destination="3NV-mB-WWc" id="Yzd-Rn-VfT"/>
+                <outlet property="settingsGearButton" destination="Hil-Tw-7GW" id="IaE-kY-2HZ"/>
+                <outlet property="valueLabel" destination="JNg-Ej-9ZC" id="ydL-cx-UtJ"/>
+                <outlet property="view" destination="VJg-2o-tKy" id="DxA-WO-0Zd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFit" id="VJg-2o-tKy">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Np1-85-VoW">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$523.40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNg-Ej-9ZC">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="85"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" misplaced="YES">
+                                <rect key="frame" x="41.5" y="22" width="307.5" height="99.5"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 BTC ➔ USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="055-KA-0S0">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" misplaced="YES">
+                                <rect key="frame" x="152.5" y="12.5" width="88.5" height="16.5"/>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="055-KA-0S0" firstAttribute="top" secondItem="Np1-85-VoW" secondAttribute="top" constant="12.5" id="72b-0D-xdc"/>
+                        <constraint firstItem="JNg-Ej-9ZC" firstAttribute="centerX" secondItem="Np1-85-VoW" secondAttribute="centerX" id="Bpy-vi-wWP">
+                            <variation key="widthClass=compact" constant="-4.75"/>
+                        </constraint>
+                        <constraint firstItem="JNg-Ej-9ZC" firstAttribute="top" secondItem="Np1-85-VoW" secondAttribute="top" constant="22" id="DeV-TQ-7MA"/>
+                        <constraint firstItem="055-KA-0S0" firstAttribute="centerX" secondItem="Np1-85-VoW" secondAttribute="centerX" id="d2u-5f-vRE">
+                            <variation key="widthClass=compact" constant="-3.25"/>
+                        </constraint>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="JNg-Ej-9ZC"/>
+                            <exclude reference="055-KA-0S0"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="Bpy-vi-wWP"/>
+                            <exclude reference="DeV-TQ-7MA"/>
+                            <exclude reference="72b-0D-xdc"/>
+                            <exclude reference="d2u-5f-vRE"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                        <rect key="frame" x="0.0" y="286" width="400" height="142"/>
+                        <mask key="subviews">
+                            <include reference="JNg-Ej-9ZC"/>
+                            <include reference="055-KA-0S0"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="Bpy-vi-wWP"/>
+                            <include reference="DeV-TQ-7MA"/>
+                            <include reference="72b-0D-xdc"/>
+                            <include reference="d2u-5f-vRE"/>
+                        </mask>
+                    </variation>
+                </view>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hil-Tw-7GW">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" image="Icon-Settings"/>
+                    <connections>
+                        <action selector="settingsButton:" destination="-1" eventType="touchUpInside" id="Qpd-s6-Dwm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLM-AL-5GS">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                    <inset key="contentEdgeInsets" minX="30" minY="15" maxX="30" maxY="15"/>
+                    <state key="normal" title="CONVERT">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showInputDialog:" destination="-1" eventType="touchUpInside" id="d9G-8N-g1O"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3NV-mB-WWc">
+                    <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                </activityIndicatorView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BitcoinLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5c0-1L-728">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="129" y="116" width="143" height="168"/>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.2666666667" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="5c0-1L-728" firstAttribute="top" secondItem="VJg-2o-tKy" secondAttribute="top" constant="110" id="1mC-qo-RIs">
+                    <variation key="widthClass=compact" constant="116"/>
+                </constraint>
+                <constraint firstItem="Hil-Tw-7GW" firstAttribute="top" secondItem="VJg-2o-tKy" secondAttribute="top" constant="60" id="2r4-EG-bDo">
+                    <variation key="widthClass=compact" constant="35"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="jLM-AL-5GS" secondAttribute="bottom" constant="120" id="QnM-rY-eRg"/>
+                <constraint firstItem="5c0-1L-728" firstAttribute="centerX" secondItem="VJg-2o-tKy" secondAttribute="centerX" id="SBV-Vi-UUi"/>
+                <constraint firstItem="Np1-85-VoW" firstAttribute="top" secondItem="Hil-Tw-7GW" secondAttribute="bottom" constant="224" id="Y50-3C-5jS">
+                    <variation key="widthClass=compact" constant="229"/>
+                </constraint>
+                <constraint firstItem="jLM-AL-5GS" firstAttribute="centerX" secondItem="VJg-2o-tKy" secondAttribute="centerX" id="Ybu-R5-vPs"/>
+                <constraint firstItem="3NV-mB-WWc" firstAttribute="top" secondItem="jLM-AL-5GS" secondAttribute="bottom" constant="15" id="eCh-EL-l6d"/>
+                <constraint firstAttribute="trailing" secondItem="Hil-Tw-7GW" secondAttribute="trailing" constant="20" id="kRG-1U-0cb"/>
+                <constraint firstItem="Np1-85-VoW" firstAttribute="centerX" secondItem="VJg-2o-tKy" secondAttribute="centerX" id="n8z-Vf-omc"/>
+                <constraint firstItem="3NV-mB-WWc" firstAttribute="centerX" secondItem="VJg-2o-tKy" secondAttribute="centerX" id="uHY-WR-tp3"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="Np1-85-VoW"/>
+                    <exclude reference="Hil-Tw-7GW"/>
+                    <exclude reference="jLM-AL-5GS"/>
+                    <exclude reference="3NV-mB-WWc"/>
+                    <exclude reference="5c0-1L-728"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="1mC-qo-RIs"/>
+                    <exclude reference="SBV-Vi-UUi"/>
+                    <exclude reference="Y50-3C-5jS"/>
+                    <exclude reference="n8z-Vf-omc"/>
+                    <exclude reference="2r4-EG-bDo"/>
+                    <exclude reference="kRG-1U-0cb"/>
+                    <exclude reference="QnM-rY-eRg"/>
+                    <exclude reference="Ybu-R5-vPs"/>
+                    <exclude reference="eCh-EL-l6d"/>
+                    <exclude reference="uHY-WR-tp3"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="Np1-85-VoW"/>
+                    <include reference="Hil-Tw-7GW"/>
+                    <include reference="jLM-AL-5GS"/>
+                    <include reference="3NV-mB-WWc"/>
+                    <include reference="5c0-1L-728"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="1mC-qo-RIs"/>
+                    <include reference="SBV-Vi-UUi"/>
+                    <include reference="Y50-3C-5jS"/>
+                    <include reference="n8z-Vf-omc"/>
+                    <include reference="2r4-EG-bDo"/>
+                    <include reference="kRG-1U-0cb"/>
+                    <include reference="QnM-rY-eRg"/>
+                    <include reference="Ybu-R5-vPs"/>
+                    <include reference="eCh-EL-l6d"/>
+                    <include reference="uHY-WR-tp3"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="BitcoinLogo" width="128" height="128"/>
+        <image name="Icon-Settings" width="22" height="22"/>
+    </resources>
+</document>
