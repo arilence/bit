@@ -31,4 +31,23 @@ public class Helpers {
         button.layer.borderColor = UIColor.whiteColor().CGColor
     }
     
+    // Formats monetary values to hopefully fit the screen
+    public static func formatMonetaryValue(value:Double) -> String {
+        var newValue:Double = value
+        var output:String = ""
+        var ending:String = ""
+        
+        if (value > 1000) {
+            ending += "K"
+            newValue = value / 1000
+        } else if (value > 1000000) {
+            ending += "M"
+            newValue = value / 1000000
+        }
+        
+        output = String(format: "%.2f", newValue)
+        output += ending
+        return output
+    }
+    
 }

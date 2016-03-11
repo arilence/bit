@@ -17,18 +17,25 @@ class HomeController: UIViewController {
     @IBOutlet weak var convertButton: UIButton!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var loadingIndicator:UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Helpers.setGradientBackground(self)
         Helpers.addBorderToButton(convertButton)
-        
         setDefaultsIfNone()
+        
+        // Show the loading indicator when loading from the interwebz
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.stopAnimating()
     }
     
     override func viewDidAppear(animated: Bool) {
+        loadingIndicator.startAnimating()
+        
         exchange.getCurrentExchange() {choice,rate in
+            self.loadingIndicator.stopAnimating()
             self.updateCurrencyLabel(choice)
             self.updateValueLabel(choice, rate: rate)
         }
@@ -41,6 +48,16 @@ class HomeController: UIViewController {
         if defaults.objectForKey(AppDelegate.settingsKeys.KEY_CURRENCY) == nil {
             defaults.setValue(0, forKey: AppDelegate.settingsKeys.KEY_CURRENCY)
             defaults.synchronize()
+            
+            // Display the defaults from previous interwebz load
+            updateCurrencyLabel(0)
+            updateValueLabel(0, rate: 0)
+        } else {
+            let choice = defaults.integerForKey(AppDelegate.settingsKeys.KEY_SAVED_CURRENCY)
+            let rate = defaults.doubleForKey(AppDelegate.settingsKeys.KEY_SAVED_RATE)
+            // Display the defaults from previous interwebz load
+            updateCurrencyLabel(choice)
+            updateValueLabel(choice, rate: rate)
         }
     }
     
@@ -52,7 +69,7 @@ class HomeController: UIViewController {
     func updateValueLabel(choice:Int, rate:Double) {
         let symbol = Exchange.CurrencyTypes[choice][1]
         let value = 1 * rate
-        valueLabel.text = symbol + String(value)
+        valueLabel.text = symbol + Helpers.formatMonetaryValue(value)
     }
 
     override func didReceiveMemoryWarning() {
