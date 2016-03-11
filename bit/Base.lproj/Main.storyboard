@@ -233,11 +233,15 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="Icon-Close"/>
                                 <connections>
-                                    <action selector="closeButton:" destination="aWf-ZH-5gr" eventType="touchUpInside" id="18R-a7-M5b"/>
+                                    <action selector="closeButton:" destination="aWf-ZH-5gr" eventType="touchUpInside" id="PcM-2l-1Wx"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HEh-z5-anl">
                                 <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aWf-ZH-5gr" id="1fx-ql-Fhi"/>
+                                    <outlet property="delegate" destination="aWf-ZH-5gr" id="YWz-SB-p7V"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5V-kb-Xzd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -246,19 +250,21 @@
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="128" y="416" width="145" height="51"/>
-                                </variation>
+                                <connections>
+                                    <action selector="saveButton:" destination="aWf-ZH-5gr" eventType="touchUpInside" id="Ntb-Pp-zUd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.2666666667" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HEh-z5-anl" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="2Is-sD-zco"/>
+                            <constraint firstItem="HEh-z5-anl" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="BVI-wm-QtS"/>
                             <constraint firstItem="B5V-kb-Xzd" firstAttribute="top" secondItem="HEh-z5-anl" secondAttribute="bottom" constant="8" id="QwX-q8-GlP"/>
                             <constraint firstItem="B5V-kb-Xzd" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="Ymk-Cr-gYt"/>
                             <constraint firstItem="Gf6-Ms-0eu" firstAttribute="trailing" secondItem="F3Q-Zg-W8l" secondAttribute="trailingMargin" id="cAe-ek-iBu"/>
                             <constraint firstItem="Gf6-Ms-0eu" firstAttribute="top" secondItem="EJI-Z2-X63" secondAttribute="bottom" constant="10" id="fdl-g6-Bf5"/>
                             <constraint firstItem="HEh-z5-anl" firstAttribute="centerY" secondItem="F3Q-Zg-W8l" secondAttribute="centerY" id="i5b-rE-AA1"/>
+                            <constraint firstItem="B5V-kb-Xzd" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="tH3-ti-M4A"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -268,11 +274,13 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="2Is-sD-zco"/>
+                                <exclude reference="BVI-wm-QtS"/>
                                 <exclude reference="i5b-rE-AA1"/>
                                 <exclude reference="cAe-ek-iBu"/>
                                 <exclude reference="fdl-g6-Bf5"/>
                                 <exclude reference="QwX-q8-GlP"/>
                                 <exclude reference="Ymk-Cr-gYt"/>
+                                <exclude reference="tH3-ti-M4A"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -283,18 +291,20 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="2Is-sD-zco"/>
+                                <include reference="BVI-wm-QtS"/>
                                 <include reference="i5b-rE-AA1"/>
                                 <include reference="cAe-ek-iBu"/>
                                 <include reference="fdl-g6-Bf5"/>
                                 <include reference="QwX-q8-GlP"/>
                                 <include reference="Ymk-Cr-gYt"/>
+                                <include reference="tH3-ti-M4A"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="currencyPicker" destination="HEh-z5-anl" id="gza-UI-uqf"/>
-                        <outlet property="saveButton" destination="B5V-kb-Xzd" id="qLg-qA-76J"/>
+                        <outlet property="saveButton" destination="B5V-kb-Xzd" id="hiO-h9-1Rv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ekc-hw-Z6s" sceneMemberID="firstResponder"/>

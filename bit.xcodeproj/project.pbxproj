@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920ABAD21C924F0400CAA88A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920ABAD11C924F0400CAA88A /* Settings.swift */; };
 		9263C88C1C62FCF10090B118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9263C88B1C62FCF10090B118 /* AppDelegate.swift */; };
 		9263C88E1C62FCF10090B118 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9263C88D1C62FCF10090B118 /* HomeController.swift */; };
 		9263C8911C62FCF10090B118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9263C88F1C62FCF10090B118 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		5F20A1AB4D36DCAFF36207F5 /* Pods-bit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bit/Pods-bit.debug.xcconfig"; sourceTree = "<group>"; };
 		804B3B86C565D3C210FD2A6F /* Pods-bit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bit.release.xcconfig"; path = "Pods/Target Support Files/Pods-bit/Pods-bit.release.xcconfig"; sourceTree = "<group>"; };
 		883FB4A747B26B1205F6F04C /* Pods_bit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		920ABAD11C924F0400CAA88A /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		9263C8881C62FCF10090B118 /* bit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9263C88B1C62FCF10090B118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9263C88D1C62FCF10090B118 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				9263C8921C62FCF10090B118 /* Assets.xcassets */,
 				9263C8971C62FCF10090B118 /* Info.plist */,
 				92836B231C8FE97300EF32B3 /* Helpers.swift */,
+				920ABAD11C924F0400CAA88A /* Settings.swift */,
 				9263C88B1C62FCF10090B118 /* AppDelegate.swift */,
 				9263C88D1C62FCF10090B118 /* HomeController.swift */,
 				92836B251C8FF1AE00EF32B3 /* SettingsController.swift */,
@@ -221,6 +224,7 @@
 				92836B241C8FE97300EF32B3 /* Helpers.swift in Sources */,
 				92836B261C8FF1AE00EF32B3 /* SettingsController.swift in Sources */,
 				9263C88C1C62FCF10090B118 /* AppDelegate.swift in Sources */,
+				920ABAD21C924F0400CAA88A /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
