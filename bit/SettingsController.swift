@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsController: UIViewController {
     
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var currencyPicker: UIPickerView!
     
@@ -20,18 +21,18 @@ class SettingsController: UIViewController {
         Helpers.addBorderToButton(saveButton)
         
         // Set picker equal to the users saved settings
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let currencyChoice = defaults.integerForKey(Settings.settingsKeys.KEY_CURRENCY)
-        currencyPicker.selectRow(currencyChoice, inComponent: 0, animated: false)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let choice = userDefaults.integerForKey(AppDelegate.settingsKeys.KEY_CURRENCY)
+        currencyPicker.selectRow(Int(choice), inComponent: 0, animated: false)
     }
 
     @IBAction func saveButton(sender: AnyObject) {
+        // Get the users selection from the uiPicker
         let choice = currencyPicker.selectedRowInComponent(0)
-        let defaults = NSUserDefaults.standardUserDefaults()
         
         // Save the value into local storage
-        defaults.setValue(choice, forKey: Settings.settingsKeys.KEY_CURRENCY)
-        defaults.synchronize()
+        userDefaults.setValue(choice, forKey: AppDelegate.settingsKeys.KEY_CURRENCY)
+        userDefaults.synchronize()
 
         closeView()
     }
@@ -44,7 +45,7 @@ class SettingsController: UIViewController {
     
     // Set the font colour of the elements in the pickerView to white
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let titleData = Settings.settingsCurrency[row]
+        let titleData = Exchange.CurrencyTypes[row]
         let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Helvetica", size: 15.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
         return myTitle
     }
@@ -59,7 +60,7 @@ class SettingsController: UIViewController {
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return Settings.settingsCurrency.count
+        return Exchange.CurrencyTypes.count
     }
     
     // MARK: Miscellaneous Extras

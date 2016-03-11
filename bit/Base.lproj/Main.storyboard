@@ -211,6 +211,8 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="convertButton" destination="BVq-V7-lvR" id="Uib-lZ-aC3"/>
+                        <outlet property="currencyLabel" destination="Sr1-uL-SIg" id="TcJ-5W-RBD"/>
+                        <outlet property="valueLabel" destination="rD4-2F-ym1" id="lmW-Io-gtg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -257,14 +259,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.2666666667" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="HEh-z5-anl" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="2Is-sD-zco"/>
-                            <constraint firstItem="HEh-z5-anl" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="BVI-wm-QtS"/>
-                            <constraint firstItem="B5V-kb-Xzd" firstAttribute="top" secondItem="HEh-z5-anl" secondAttribute="bottom" constant="8" id="QwX-q8-GlP"/>
-                            <constraint firstItem="B5V-kb-Xzd" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="Ymk-Cr-gYt"/>
+                            <constraint firstItem="B5V-kb-Xzd" firstAttribute="top" secondItem="HEh-z5-anl" secondAttribute="bottom" constant="8" id="1M0-Ie-rh2">
+                                <variation key="widthClass=compact" constant="21"/>
+                            </constraint>
+                            <constraint firstItem="HEh-z5-anl" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="5xf-x4-mv3"/>
                             <constraint firstItem="Gf6-Ms-0eu" firstAttribute="trailing" secondItem="F3Q-Zg-W8l" secondAttribute="trailingMargin" id="cAe-ek-iBu"/>
+                            <constraint firstItem="B5V-kb-Xzd" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="dz2-jP-jNF"/>
                             <constraint firstItem="Gf6-Ms-0eu" firstAttribute="top" secondItem="EJI-Z2-X63" secondAttribute="bottom" constant="10" id="fdl-g6-Bf5"/>
-                            <constraint firstItem="HEh-z5-anl" firstAttribute="centerY" secondItem="F3Q-Zg-W8l" secondAttribute="centerY" id="i5b-rE-AA1"/>
-                            <constraint firstItem="B5V-kb-Xzd" firstAttribute="centerX" secondItem="F3Q-Zg-W8l" secondAttribute="centerX" id="tH3-ti-M4A"/>
+                            <constraint firstItem="HEh-z5-anl" firstAttribute="top" secondItem="EJI-Z2-X63" secondAttribute="bottom" constant="169" id="zJ1-zv-HQY">
+                                <variation key="widthClass=compact" constant="159"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -273,14 +277,12 @@
                                 <exclude reference="B5V-kb-Xzd"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2Is-sD-zco"/>
-                                <exclude reference="BVI-wm-QtS"/>
-                                <exclude reference="i5b-rE-AA1"/>
+                                <exclude reference="5xf-x4-mv3"/>
+                                <exclude reference="zJ1-zv-HQY"/>
                                 <exclude reference="cAe-ek-iBu"/>
                                 <exclude reference="fdl-g6-Bf5"/>
-                                <exclude reference="QwX-q8-GlP"/>
-                                <exclude reference="Ymk-Cr-gYt"/>
-                                <exclude reference="tH3-ti-M4A"/>
+                                <exclude reference="1M0-Ie-rh2"/>
+                                <exclude reference="dz2-jP-jNF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -290,14 +292,12 @@
                                 <include reference="B5V-kb-Xzd"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="2Is-sD-zco"/>
-                                <include reference="BVI-wm-QtS"/>
-                                <include reference="i5b-rE-AA1"/>
+                                <include reference="5xf-x4-mv3"/>
+                                <include reference="zJ1-zv-HQY"/>
                                 <include reference="cAe-ek-iBu"/>
                                 <include reference="fdl-g6-Bf5"/>
-                                <include reference="QwX-q8-GlP"/>
-                                <include reference="Ymk-Cr-gYt"/>
-                                <include reference="tH3-ti-M4A"/>
+                                <include reference="1M0-Ie-rh2"/>
+                                <include reference="dz2-jP-jNF"/>
                             </mask>
                         </variation>
                     </view>

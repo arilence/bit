@@ -10,6 +10,12 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    enum settingsKeys {
+        static let KEY_CURRENCY = "currency_key"
+        static let KEY_SAVED_CURRENCY = "saved_currency_key"
+        static let KEY_SAVED_RATE = "saved_rate_key"
+    }
 
     var window: UIWindow?
 
