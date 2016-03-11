@@ -97,6 +97,7 @@ class HomeController: UIViewController {
         })
         
         //3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             let textField = alert.textFields![0] as UITextField
             let outputString = textField.text!
@@ -108,7 +109,6 @@ class HomeController: UIViewController {
                 self.showErrorDialog()
             }
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
         
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
