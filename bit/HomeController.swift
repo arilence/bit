@@ -25,10 +25,12 @@ class HomeController: UIViewController {
         Helpers.addBorderToButton(convertButton)
         
         setDefaultsIfNone()
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         exchange.getCurrentExchange() {choice,rate in
             self.updateCurrencyLabel(choice)
-            self.updateValueLabel(rate)
+            self.updateValueLabel(choice, rate: rate)
         }
     }
     
@@ -43,13 +45,14 @@ class HomeController: UIViewController {
     }
     
     func updateCurrencyLabel(choice:Int) {
-        let value = Exchange.CurrencyTypes[choice]
+        let value = Exchange.CurrencyTypes[choice][0]
         currencyLabel.text = "1 BTC ➔ " + value
     }
     
-    func updateValueLabel(rate:Double) {
+    func updateValueLabel(choice:Int, rate:Double) {
+        let symbol = Exchange.CurrencyTypes[choice][1]
         let value = 1 * rate
-        valueLabel.text = String(value)
+        valueLabel.text = symbol + String(value)
     }
 
     override func didReceiveMemoryWarning() {

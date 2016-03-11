@@ -12,12 +12,11 @@ import SwiftyJSON
 public class Exchange {
     
     public static let CurrencyTypes = [
-        "CAD",
-        "USD",
-        "JPY",
-        "GBP",
-        "EUR",
-        "AUD"
+        ["CAD", "$"],
+        ["USD", "$"],
+        ["JPY", "¥"],
+        ["GBP", "£"],
+        ["EUR", "€"]
     ]
     
     private let baseURL = "https://api.bitcoinaverage.com/ticker/global/"
@@ -26,7 +25,7 @@ public class Exchange {
     public func getCurrentExchange(completion: (choice: Int, rate:Double) -> Void) {
         // Get the currency code from the users settings
         let exchangeChoice = userDefaults.integerForKey(AppDelegate.settingsKeys.KEY_CURRENCY)
-        let exchange = Exchange.CurrencyTypes[exchangeChoice]
+        let exchange = Exchange.CurrencyTypes[exchangeChoice][0]
         
         // Try and get the current exchange rate for the specified currency
         Alamofire.request(.GET, baseURL + exchange, parameters: nil)
