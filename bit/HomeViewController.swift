@@ -38,6 +38,7 @@ internal final class HomeViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         getCurrentExchange()
     }
     
@@ -161,6 +162,7 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
         return MaskTransition(presenting: true, position: settingsGearButton?.center ?? CGPoint.zero)
     }
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        getCurrentExchange()
         return MaskTransition(presenting: false, position: settingsGearButton?.center ?? CGPoint.zero)
     }
 }
