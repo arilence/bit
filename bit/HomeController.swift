@@ -99,18 +99,24 @@ class HomeController: UIViewController {
         //3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             let textField = alert.textFields![0] as UITextField
-            let output = Float(textField.text!)
+            let outputString = textField.text!
+            let output = Float(outputString)
             if (output != nil) {
-                print("SUCCESS")
                 defaults.setValue(output, forKey: AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
                 self.getCurrentExchange()
-            } else {
-                print("ERROR")
-                // TODO: Display error message
+            } else if (outputString.characters.count > 0) {
+                self.showErrorDialog()
             }
         }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
         
         // 4. Present the alert.
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func showErrorDialog() {
+        let alert = UIAlertController(title: "Whoops", message: "The value you entered is invalid", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
 
