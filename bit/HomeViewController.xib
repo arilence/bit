@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
     </dependencies>
     <objects>
@@ -99,7 +98,7 @@
                 <constraint firstItem="5c0-1L-728" firstAttribute="top" secondItem="VJg-2o-tKy" secondAttribute="top" constant="110" id="1mC-qo-RIs">
                     <variation key="widthClass=compact" constant="116"/>
                 </constraint>
-                <constraint firstItem="Hil-Tw-7GW" firstAttribute="top" secondItem="VJg-2o-tKy" secondAttribute="top" constant="60" id="2r4-EG-bDo">
+                <constraint firstItem="Hil-Tw-7GW" firstAttribute="top" secondItem="VJg-2o-tKy" secondAttribute="top" constant="35" id="2r4-EG-bDo">
                     <variation key="widthClass=compact" constant="35"/>
                 </constraint>
                 <constraint firstAttribute="bottom" secondItem="jLM-AL-5GS" secondAttribute="bottom" constant="120" id="QnM-rY-eRg"/>
@@ -123,16 +122,16 @@
                     <include reference="5c0-1L-728"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="1mC-qo-RIs"/>
+                    <include reference="SBV-Vi-UUi"/>
+                    <include reference="Y50-3C-5jS"/>
+                    <include reference="n8z-Vf-omc"/>
                     <include reference="eCh-EL-l6d"/>
                     <include reference="uHY-WR-tp3"/>
                     <include reference="2r4-EG-bDo"/>
                     <include reference="kRG-1U-0cb"/>
                     <include reference="QnM-rY-eRg"/>
                     <include reference="Ybu-R5-vPs"/>
-                    <include reference="1mC-qo-RIs"/>
-                    <include reference="SBV-Vi-UUi"/>
-                    <include reference="Y50-3C-5jS"/>
-                    <include reference="n8z-Vf-omc"/>
                 </mask>
             </variation>
         </view>
