@@ -26,7 +26,6 @@ internal final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Helpers.setGradientBackground(self)
         Helpers.addBorderToButton(convertButton, color: UIColor.whiteColor())
         setDefaultsIfNone()
         navigationItem.hidesBackButton = true
@@ -44,6 +43,7 @@ internal final class HomeViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        Helpers.setGradientBackground(self)
     }
     
     override func didReceiveMemoryWarning() {

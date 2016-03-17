@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="bit" customModuleProvider="target">
@@ -20,10 +20,10 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Np1-85-VoW">
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Np1-85-VoW">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$523.40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNg-Ej-9ZC">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$523.40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNg-Ej-9ZC">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,7 +32,7 @@
                                 <rect key="frame" x="41.5" y="22" width="307.5" height="99.5"/>
                             </variation>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 BTC ➔ USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="055-KA-0S0">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 BTC ➔ USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="055-KA-0S0">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,18 +52,6 @@
                             <variation key="widthClass=compact" constant="-3.25"/>
                         </constraint>
                     </constraints>
-                    <variation key="default">
-                        <mask key="subviews">
-                            <exclude reference="JNg-Ej-9ZC"/>
-                            <exclude reference="055-KA-0S0"/>
-                        </mask>
-                        <mask key="constraints">
-                            <exclude reference="Bpy-vi-wWP"/>
-                            <exclude reference="DeV-TQ-7MA"/>
-                            <exclude reference="72b-0D-xdc"/>
-                            <exclude reference="d2u-5f-vRE"/>
-                        </mask>
-                    </variation>
                     <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="0.0" y="286" width="400" height="142"/>
                         <mask key="subviews">
@@ -71,21 +59,21 @@
                             <include reference="055-KA-0S0"/>
                         </mask>
                         <mask key="constraints">
-                            <include reference="Bpy-vi-wWP"/>
-                            <include reference="DeV-TQ-7MA"/>
                             <include reference="72b-0D-xdc"/>
                             <include reference="d2u-5f-vRE"/>
+                            <include reference="Bpy-vi-wWP"/>
+                            <include reference="DeV-TQ-7MA"/>
                         </mask>
                     </variation>
                 </view>
-                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hil-Tw-7GW">
+                <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hil-Tw-7GW">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" image="Icon-Settings"/>
                     <connections>
                         <action selector="settingsButton:" destination="-1" eventType="touchUpInside" id="Qpd-s6-Dwm"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLM-AL-5GS">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLM-AL-5GS">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                     <inset key="contentEdgeInsets" minX="30" minY="15" maxX="30" maxY="15"/>
@@ -96,10 +84,10 @@
                         <action selector="showInputDialog:" destination="-1" eventType="touchUpInside" id="d9G-8N-g1O"/>
                     </connections>
                 </button>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3NV-mB-WWc">
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3NV-mB-WWc">
                     <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                 </activityIndicatorView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BitcoinLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5c0-1L-728">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BitcoinLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5c0-1L-728">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <variation key="widthClass=compact" misplaced="YES">
                         <rect key="frame" x="129" y="116" width="143" height="168"/>
@@ -126,27 +114,6 @@
                 <constraint firstItem="3NV-mB-WWc" firstAttribute="centerX" secondItem="VJg-2o-tKy" secondAttribute="centerX" id="uHY-WR-tp3"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
-            <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="Np1-85-VoW"/>
-                    <exclude reference="Hil-Tw-7GW"/>
-                    <exclude reference="jLM-AL-5GS"/>
-                    <exclude reference="3NV-mB-WWc"/>
-                    <exclude reference="5c0-1L-728"/>
-                </mask>
-                <mask key="constraints">
-                    <exclude reference="1mC-qo-RIs"/>
-                    <exclude reference="SBV-Vi-UUi"/>
-                    <exclude reference="Y50-3C-5jS"/>
-                    <exclude reference="n8z-Vf-omc"/>
-                    <exclude reference="2r4-EG-bDo"/>
-                    <exclude reference="kRG-1U-0cb"/>
-                    <exclude reference="QnM-rY-eRg"/>
-                    <exclude reference="Ybu-R5-vPs"/>
-                    <exclude reference="eCh-EL-l6d"/>
-                    <exclude reference="uHY-WR-tp3"/>
-                </mask>
-            </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="Np1-85-VoW"/>
@@ -156,16 +123,16 @@
                     <include reference="5c0-1L-728"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="1mC-qo-RIs"/>
-                    <include reference="SBV-Vi-UUi"/>
-                    <include reference="Y50-3C-5jS"/>
-                    <include reference="n8z-Vf-omc"/>
+                    <include reference="eCh-EL-l6d"/>
+                    <include reference="uHY-WR-tp3"/>
                     <include reference="2r4-EG-bDo"/>
                     <include reference="kRG-1U-0cb"/>
                     <include reference="QnM-rY-eRg"/>
                     <include reference="Ybu-R5-vPs"/>
-                    <include reference="eCh-EL-l6d"/>
-                    <include reference="uHY-WR-tp3"/>
+                    <include reference="1mC-qo-RIs"/>
+                    <include reference="SBV-Vi-UUi"/>
+                    <include reference="Y50-3C-5jS"/>
+                    <include reference="n8z-Vf-omc"/>
                 </mask>
             </variation>
         </view>

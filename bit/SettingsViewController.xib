@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="bit" customModuleProvider="target">
@@ -17,23 +17,23 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g41-0W-EA3">
+                <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g41-0W-EA3">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" image="Icon-Close"/>
                     <connections>
                         <action selector="closeButton:" destination="-1" eventType="touchUpInside" id="6Mi-x6-QtB"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65s-Y3-E9w">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose a Currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65s-Y3-E9w">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvH-Tb-7aS">
+                <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lvH-Tb-7aS">
                     <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
                 </pickerView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCk-MT-HnC">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCk-MT-HnC">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                     <inset key="contentEdgeInsets" minX="30" minY="15" maxX="30" maxY="15"/>
@@ -60,24 +60,6 @@
                 <constraint firstItem="65s-Y3-E9w" firstAttribute="centerX" secondItem="dHD-63-I2l" secondAttribute="centerX" id="vwr-DR-YEy"/>
                 <constraint firstItem="lvH-Tb-7aS" firstAttribute="centerX" secondItem="dHD-63-I2l" secondAttribute="centerX" id="wif-gJ-uQ1"/>
             </constraints>
-            <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="g41-0W-EA3"/>
-                    <exclude reference="65s-Y3-E9w"/>
-                    <exclude reference="lvH-Tb-7aS"/>
-                    <exclude reference="CCk-MT-HnC"/>
-                </mask>
-                <mask key="constraints">
-                    <exclude reference="H3K-OQ-Tqz"/>
-                    <exclude reference="wif-gJ-uQ1"/>
-                    <exclude reference="pdd-md-PE6"/>
-                    <exclude reference="qVN-1g-zDy"/>
-                    <exclude reference="l6V-lY-5g6"/>
-                    <exclude reference="rEk-5m-tez"/>
-                    <exclude reference="eEl-0r-a4H"/>
-                    <exclude reference="vwr-DR-YEy"/>
-                </mask>
-            </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
                     <include reference="g41-0W-EA3"/>
