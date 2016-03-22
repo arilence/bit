@@ -146,7 +146,7 @@
 				TargetAttributes = {
 					9263C8871C62FCF10090B118 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 42B279W6LP;
+						DevelopmentTeam = A9S7557CMJ;
 					};
 				};
 			};
@@ -348,7 +348,7 @@
 				INFOPLIST_FILE = bit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.mspry.iphone.bit;
+				PRODUCT_BUNDLE_IDENTIFIER = cm.smith.iphone.bit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,7 +363,7 @@
 				INFOPLIST_FILE = bit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.mspry.iphone.bit;
+				PRODUCT_BUNDLE_IDENTIFIER = cm.smith.iphone.bit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
