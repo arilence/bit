@@ -11,7 +11,6 @@ import ReachabilitySwift
 public class Network {
     
     private var reachability: Reachability!
-    private var reachable:Bool = false
     
     init () {
         do {
@@ -27,7 +26,6 @@ public class Network {
             // this is called on a background thread, but UI updates must
             // be on the main thread, like this:
             dispatch_async(dispatch_get_main_queue()) {
-                self.reachable = true
                 connected()
                 print("Reachable")
             }
@@ -36,7 +34,6 @@ public class Network {
             // this is called on a background thread, but UI updates must
             // be on the main thread, like this:
             dispatch_async(dispatch_get_main_queue()) {
-                self.reachable = false
                 notConnected()
                 print("Not reachable")
             }
@@ -50,7 +47,7 @@ public class Network {
     }
     
     public func isReachable() -> Bool {
-        return self.reachable
+        return self.reachability.isReachable()
     }
     
 }
