@@ -39,6 +39,7 @@ internal final class HomeViewController: UIViewController {
         // Notifies when the user is connected to the internet
         network.startChecking({
             print("Connected")
+            self.getCurrentExchange()
         }, notConnected: {
             print("Lost Connection")
         })
@@ -174,7 +175,7 @@ internal final class HomeViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         
         if let dateTime = defaults.objectForKey(AppDelegate.settingsKeys.KEY_PREVIOUS_SYNC) as? NSDate {
-            lastUpdatedSync.text = "Last Updated: " + dateFormatter.stringFromDate(dateTime)
+            lastUpdatedSync.text = "Last Updated: " + timeAgoSince(dateTime)
         } else {
             lastUpdatedSync.text = "Last Updated: Never"
         }
