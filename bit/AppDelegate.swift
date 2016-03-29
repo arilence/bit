@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         static let KEY_SAVED_CURRENCY = "saved_currency_key"
         static let KEY_SAVED_RATE = "saved_rate_key"
         static let KEY_SAVED_BITCOIN = "saved_bitcoin"
+        static let KEY_PREVIOUS_SYNC = "previous_sync"
     }
 
     var window: UIWindow?

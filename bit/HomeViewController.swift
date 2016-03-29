@@ -20,6 +20,7 @@ internal final class HomeViewController: UIViewController {
     @IBOutlet weak var settingsGearButton: UIButton!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var lastUpdatedSync: UILabel!
     @IBOutlet weak var loadingIndicator:UIActivityIndicatorView!
     
     // MARK: UIViewController
@@ -116,6 +117,10 @@ internal final class HomeViewController: UIViewController {
             exchange.getCurrentExchange() {choice,rate in
                 let defaults = NSUserDefaults.standardUserDefaults()
                 let bitNum = defaults.floatForKey(AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
+                defaults.setObject(NSDate(), forKey: AppDelegate.settingsKeys.KEY_PREVIOUS_SYNC)
+                defaults.synchronize()
+                
+                self.updateLastSyncTime()
             
                 self.loadingIndicator.stopAnimating()
                 self.updateCurrencyLabel(bitNum, choice: choice)
@@ -147,6 +152,7 @@ internal final class HomeViewController: UIViewController {
             updateCurrencyLabel(bitCoin, choice: choice)
             updateValueLabel(choice, rate: rate)
         }
+        updateLastSyncTime()
     }
     
     func updateCurrencyLabel(bitNum:Float, choice:Int) {
@@ -160,6 +166,18 @@ internal final class HomeViewController: UIViewController {
         let symbol = Exchange.CurrencyTypes[choice][1]
         let value = Double(bitCoin) * rate
         valueLabel.text = symbol + Helpers.formatMonetaryValue(value)
+    }
+    
+    func updateLastSyncTime() {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if let dateTime = defaults.objectForKey(AppDelegate.settingsKeys.KEY_PREVIOUS_SYNC) as? NSDate {
+            lastUpdatedSync.text = "Last Updated: " + dateFormatter.stringFromDate(dateTime)
+        } else {
+            lastUpdatedSync.text = "Last Updated: Never"
+        }
     }
     
     // Shows the settings page

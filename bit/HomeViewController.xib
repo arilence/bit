@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="bit" customModuleProvider="target">
             <connections>
                 <outlet property="convertButton" destination="jLM-AL-5GS" id="R9P-t3-EZU"/>
                 <outlet property="currencyLabel" destination="055-KA-0S0" id="WaA-um-W1L"/>
+                <outlet property="lastUpdatedSync" destination="gpB-H9-qDw" id="9LH-rz-0L1"/>
                 <outlet property="loadingIndicator" destination="3NV-mB-WWc" id="Yzd-Rn-VfT"/>
                 <outlet property="settingsGearButton" destination="Hil-Tw-7GW" id="IaE-kY-2HZ"/>
                 <outlet property="valueLabel" destination="JNg-Ej-9ZC" id="ydL-cx-UtJ"/>
@@ -46,7 +47,7 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" misplaced="YES">
-                                <rect key="frame" x="104" y="113" width="193" height="21"/>
+                                <rect key="frame" x="105" y="113" width="181" height="16.5"/>
                             </variation>
                         </label>
                     </subviews>
@@ -87,14 +88,14 @@
                             <include reference="gpB-H9-qDw"/>
                         </mask>
                         <mask key="constraints">
-                            <include reference="Bpy-vi-wWP"/>
-                            <include reference="DeV-TQ-7MA"/>
-                            <include reference="72b-0D-xdc"/>
-                            <include reference="d2u-5f-vRE"/>
                             <include reference="5m3-2Q-BYk"/>
                             <include reference="7Ft-Hr-fBF"/>
                             <include reference="GLk-Gi-oJn"/>
                             <include reference="Wjo-1t-EOn"/>
+                            <include reference="72b-0D-xdc"/>
+                            <include reference="d2u-5f-vRE"/>
+                            <include reference="Bpy-vi-wWP"/>
+                            <include reference="DeV-TQ-7MA"/>
                         </mask>
                     </variation>
                 </view>
