@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="bit" customModuleProvider="target">
@@ -22,6 +22,15 @@
                 <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Np1-85-VoW">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 BTC ➔ USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="055-KA-0S0">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" misplaced="YES">
+                                <rect key="frame" x="152" y="12" width="88.5" height="16.5"/>
+                            </variation>
+                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$523.40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNg-Ej-9ZC">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
@@ -31,37 +40,61 @@
                                 <rect key="frame" x="41.5" y="22" width="307.5" height="99.5"/>
                             </variation>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 BTC ➔ USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="055-KA-0S0">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Updated: Moments Ago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpB-H9-qDw">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="widthClass=compact" misplaced="YES">
-                                <rect key="frame" x="152.5" y="12.5" width="88.5" height="16.5"/>
+                                <rect key="frame" x="104" y="113" width="193" height="21"/>
                             </variation>
                         </label>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="gpB-H9-qDw" firstAttribute="centerX" secondItem="Np1-85-VoW" secondAttribute="centerX" id="5m3-2Q-BYk"/>
                         <constraint firstItem="055-KA-0S0" firstAttribute="top" secondItem="Np1-85-VoW" secondAttribute="top" constant="12.5" id="72b-0D-xdc"/>
+                        <constraint firstItem="gpB-H9-qDw" firstAttribute="centerY" secondItem="Np1-85-VoW" secondAttribute="centerY" id="7Ft-Hr-fBF">
+                            <variation key="widthClass=compact" constant="52"/>
+                        </constraint>
                         <constraint firstItem="JNg-Ej-9ZC" firstAttribute="centerX" secondItem="Np1-85-VoW" secondAttribute="centerX" id="Bpy-vi-wWP">
                             <variation key="widthClass=compact" constant="-4.75"/>
                         </constraint>
                         <constraint firstItem="JNg-Ej-9ZC" firstAttribute="top" secondItem="Np1-85-VoW" secondAttribute="top" constant="22" id="DeV-TQ-7MA"/>
+                        <constraint firstAttribute="bottom" secondItem="gpB-H9-qDw" secondAttribute="bottom" constant="4" id="GLk-Gi-oJn">
+                            <variation key="widthClass=compact" constant="8"/>
+                        </constraint>
+                        <constraint firstItem="gpB-H9-qDw" firstAttribute="centerX" secondItem="Np1-85-VoW" secondAttribute="centerX" id="Wjo-1t-EOn"/>
                         <constraint firstItem="055-KA-0S0" firstAttribute="centerX" secondItem="Np1-85-VoW" secondAttribute="centerX" id="d2u-5f-vRE">
                             <variation key="widthClass=compact" constant="-3.25"/>
                         </constraint>
                     </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="gpB-H9-qDw"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="5m3-2Q-BYk"/>
+                            <exclude reference="7Ft-Hr-fBF"/>
+                            <exclude reference="GLk-Gi-oJn"/>
+                            <exclude reference="Wjo-1t-EOn"/>
+                        </mask>
+                    </variation>
                     <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="0.0" y="286" width="400" height="142"/>
                         <mask key="subviews">
-                            <include reference="JNg-Ej-9ZC"/>
                             <include reference="055-KA-0S0"/>
+                            <include reference="JNg-Ej-9ZC"/>
+                            <include reference="gpB-H9-qDw"/>
                         </mask>
                         <mask key="constraints">
-                            <include reference="72b-0D-xdc"/>
-                            <include reference="d2u-5f-vRE"/>
                             <include reference="Bpy-vi-wWP"/>
                             <include reference="DeV-TQ-7MA"/>
+                            <include reference="72b-0D-xdc"/>
+                            <include reference="d2u-5f-vRE"/>
+                            <include reference="5m3-2Q-BYk"/>
+                            <include reference="7Ft-Hr-fBF"/>
+                            <include reference="GLk-Gi-oJn"/>
+                            <include reference="Wjo-1t-EOn"/>
                         </mask>
                     </variation>
                 </view>

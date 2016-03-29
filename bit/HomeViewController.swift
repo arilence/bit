@@ -15,6 +15,7 @@ internal final class HomeViewController: UIViewController {
     // MARK: Variables
     
     private let exchange:Exchange = Exchange()
+    private let network:Network = Network()
     @IBOutlet weak var convertButton: UIButton!
     @IBOutlet weak var settingsGearButton: UIButton!
     @IBOutlet weak var currencyLabel: UILabel!
@@ -30,9 +31,16 @@ internal final class HomeViewController: UIViewController {
         setDefaultsIfNone()
         navigationItem.hidesBackButton = true
         
-        // Show the loading indicator when loading from the interwebz
+        // Hide the loading indicator at launch
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.stopAnimating()
+        
+        // Notifies when the user is connected to the internet
+        network.startChecking({
+            print("Connected")
+        }, notConnected: {
+            print("Lost Connection")
+        })
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -63,16 +71,14 @@ internal final class HomeViewController: UIViewController {
     @IBAction func showInputDialog(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         
-        //1. Create the alert controller.
+        // Create the alert
         let alert = UIAlertController(title: "Bitcoin Conversion", message: "Enter an amount of bitcoins", preferredStyle: .Alert)
-        
-        //2. Add the text field. You can configure it however you need.
         alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
             textField.keyboardType = UIKeyboardType.DecimalPad
             textField.text = ""
         })
         
-        //3. Grab the value from the text field, and print it when the user clicks OK.
+        // Configure the alert
         alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             let textField = alert.textFields![0] as UITextField
@@ -90,7 +96,7 @@ internal final class HomeViewController: UIViewController {
             }
         }))
         
-        // 4. Present the alert.
+        // Present the alert
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -104,15 +110,19 @@ internal final class HomeViewController: UIViewController {
     
     // Updates and loads the current conversion rate from the interwebz
     func getCurrentExchange() {
-        loadingIndicator.startAnimating()
+        if (network.isReachable()) {
+            loadingIndicator.startAnimating()
         
-        exchange.getCurrentExchange() {choice,rate in
-            let defaults = NSUserDefaults.standardUserDefaults()
-            let bitNum = defaults.floatForKey(AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
+            exchange.getCurrentExchange() {choice,rate in
+                let defaults = NSUserDefaults.standardUserDefaults()
+                let bitNum = defaults.floatForKey(AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
             
-            self.loadingIndicator.stopAnimating()
-            self.updateCurrencyLabel(bitNum, choice: choice)
-            self.updateValueLabel(choice, rate: rate)
+                self.loadingIndicator.stopAnimating()
+                self.updateCurrencyLabel(bitNum, choice: choice)
+                self.updateValueLabel(choice, rate: rate)
+            }
+        } else {
+            showErrorDialog("No network connection")
         }
     }
     
@@ -125,13 +135,14 @@ internal final class HomeViewController: UIViewController {
             defaults.setValue(1, forKey: AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
             defaults.synchronize()
             
-            // Display the defaults from previous interwebz load
+            // Display the defaults if no internet
             updateCurrencyLabel(1, choice: 0)
             updateValueLabel(0, rate: 0)
         } else {
             let choice = defaults.integerForKey(AppDelegate.settingsKeys.KEY_SAVED_CURRENCY)
             let rate = defaults.doubleForKey(AppDelegate.settingsKeys.KEY_SAVED_RATE)
             let bitCoin = defaults.floatForKey(AppDelegate.settingsKeys.KEY_SAVED_BITCOIN)
+            
             // Display the defaults from previous interwebz load
             updateCurrencyLabel(bitCoin, choice: choice)
             updateValueLabel(choice, rate: rate)

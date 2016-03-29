@@ -14,6 +14,7 @@
 		9263C8961C62FCF10090B118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9263C8941C62FCF10090B118 /* LaunchScreen.storyboard */; };
 		92836B241C8FE97300EF32B3 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92836B231C8FE97300EF32B3 /* Helpers.swift */; };
 		92836B261C8FF1AE00EF32B3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92836B251C8FF1AE00EF32B3 /* SettingsViewController.swift */; };
+		92C1C2D11CA2090D00D2945D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C1C2D01CA2090D00D2945D /* Network.swift */; };
 		92D94D801C932C40006736ED /* MaskTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D94D7F1C932C40006736ED /* MaskTransition.swift */; };
 		92D94D871C93363B006736ED /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D94D861C93363B006736ED /* HomeViewController.xib */; };
 		92D94D891C933F64006736ED /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D94D881C933F64006736ED /* SettingsViewController.xib */; };
@@ -33,6 +34,7 @@
 		9263C8971C62FCF10090B118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92836B231C8FE97300EF32B3 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		92836B251C8FF1AE00EF32B3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		92C1C2D01CA2090D00D2945D /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		92D94D7F1C932C40006736ED /* MaskTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskTransition.swift; sourceTree = "<group>"; };
 		92D94D861C93363B006736ED /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		92D94D881C933F64006736ED /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				9263C88B1C62FCF10090B118 /* AppDelegate.swift */,
 				92836B231C8FE97300EF32B3 /* Helpers.swift */,
 				920ABAD51C9264A600CAA88A /* Exchange.swift */,
+				92C1C2D01CA2090D00D2945D /* Network.swift */,
 				9263C8941C62FCF10090B118 /* LaunchScreen.storyboard */,
 				92D94D7F1C932C40006736ED /* MaskTransition.swift */,
 			);
@@ -239,6 +242,7 @@
 				9263C88E1C62FCF10090B118 /* HomeViewController.swift in Sources */,
 				92836B241C8FE97300EF32B3 /* Helpers.swift in Sources */,
 				920ABAD61C9264A600CAA88A /* Exchange.swift in Sources */,
+				92C1C2D11CA2090D00D2945D /* Network.swift in Sources */,
 				92836B261C8FF1AE00EF32B3 /* SettingsViewController.swift in Sources */,
 				9263C88C1C62FCF10090B118 /* AppDelegate.swift in Sources */,
 			);
